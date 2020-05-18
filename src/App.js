@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 import FrontPage from './Components/FrontPage';
-import NavBar from './Components/NavBar';
+import ButtonAppBar from './Components/ButtonAppBar';
 
 const App = () => ( 
     <>
-    <NavBar />
+    <ButtonAppBar />
     <FrontPage />
     </> 
 );
