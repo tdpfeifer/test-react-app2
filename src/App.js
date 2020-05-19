@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import FrontPage from './Components/FrontPage';
 import ButtonAppBar from './Components/ButtonAppBar';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 
 const theme = createMuiTheme({
   palette: {
@@ -16,12 +16,13 @@ const theme = createMuiTheme({
 });
 
 const App = () => (
-  <ThemeProvider theme={theme}> 
+  <ThemeProvider theme={theme}>
     <>
-    <ButtonAppBar />
-    <FrontPage />
+      <ButtonAppBar />
+
+      <FrontPage />
     </>
-    </ThemeProvider>
+  </ThemeProvider>
 );
 
 export default App;
