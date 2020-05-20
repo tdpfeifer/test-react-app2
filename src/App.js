@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import FrontPage from './Components/FrontPage';
 import ButtonAppBar from './Components/ButtonAppBar';
@@ -17,11 +18,23 @@ const theme = createMuiTheme({
 
 const App = () => (
   <ThemeProvider theme={theme}>
-    <>
+    <Router>
       <ButtonAppBar />
-
-      <FrontPage />
-    </>
+      <Switch>
+        <Route path="/">
+          <FrontPage />
+        </Route>
+        <Route path="/">
+          <FrontPage />
+        </Route>
+        <Route path="/">
+          <FrontPage />
+        </Route>
+        <Route path="/">
+          <FrontPage />
+        </Route>
+      </Switch>
+    </Router>
   </ThemeProvider>
 );
 
