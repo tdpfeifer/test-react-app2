@@ -1,6 +1,6 @@
 import React from 'react';
 import {Box, Typography, Button} from '@material-ui/core';
-import Hero from '../img/Homepage-Hero-min.jpg';
+import Hero from '../Img/Homepage-Hero-min.jpg';
 
 export default function HeroSection() {
   return (

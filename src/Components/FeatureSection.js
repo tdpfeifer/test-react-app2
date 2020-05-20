@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, Typography} from '@material-ui/core';
+import {Grid, Typography, Box, ListItem} from '@material-ui/core';
 import Feature1 from '../Img/Feature-1.png';
 import Feature2 from '../Img/Feature-2.png';
 import Feature3 from '../Img/Feature-3.png';
@@ -12,16 +12,25 @@ const CoffeeList = [
 
 export default function FeatureSection() {
   return (
-    <>
-      {CoffeeList.map(({name, size, img}, i) => (
-        <div key={i}>
-          <Grid item xs={4}>
-            <img src={img} alt="" style={{width: '200px'}} />
-            <Typography variant="h4">{name}</Typography>
-            <Typography variant="caption">{size}</Typography>
+    <Grid container spacing={3}>
+      <>
+        {CoffeeList.map(({name, size, img}, i) => (
+          <Grid item sm={12} md={4} key={i}>
+            <ListItem button>
+              <Box
+                display="flex"
+                alignItems="center"
+                flexDirection="column"
+                p={3}
+              >
+                <img src={img} alt="" style={{width: '100%'}} />
+                <Typography variant="h4">{name}</Typography>
+                <Typography variant="caption">{size}</Typography>
+              </Box>
+            </ListItem>
           </Grid>
-        </div>
-      ))}
-    </>
+        ))}
+      </>
+    </Grid>
   );
 }
