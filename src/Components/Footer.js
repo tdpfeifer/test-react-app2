@@ -39,7 +39,12 @@ export default function Footer() {
                   Subcribe for the latest updates!
                 </Typography>
               </Box>
-              <TextField id="Subscribe" label="Subscribe" variant="outlined" />
+              <TextField
+                fullWidth
+                id="Subscribe"
+                label="Enter E-mail"
+                variant="outlined"
+              />
             </Grid>
             <Grid item lg={6} md={6} sm={12}>
               <IconButton>
