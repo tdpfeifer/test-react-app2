@@ -2,6 +2,7 @@ import React from 'react';
 import HeroSection from './HeroSection';
 import {Container} from '@material-ui/core';
 import FeatureSection from './FeatureSection';
+import Footer from './Footer';
 
 export default function FrontPage() {
   return (
@@ -10,6 +11,7 @@ export default function FrontPage() {
         <HeroSection />
         <FeatureSection />
       </Container>
+      <Footer />
     </>
   );
 }
