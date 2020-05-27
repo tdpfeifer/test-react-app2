@@ -22,16 +22,16 @@ const App = () => (
     <Router>
       <ButtonAppBar />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <FrontPage />
         </Route>
         <Route path="/about-us">
           <AboutUs />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <FrontPage />
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <FrontPage />
         </Route>
       </Switch>
