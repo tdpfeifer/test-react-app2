@@ -2,10 +2,10 @@ import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Nav from './Nav';
+import {Box} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,12 +34,19 @@ export default function ButtonAppBar() {
           >
             <Nav />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            Leblanc Coffee Co.
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <Box
+            style={{width: '100%'}}
+            display="flex"
+            justifyContent="space-between"
+          >
+            <Button color="inherit" href="/">
+              Leblanc Coffee Co.
+            </Button>
+            <Button color="inherit">Login</Button>
+          </Box>
         </Toolbar>
       </AppBar>
+      <Box style={{height: 64}}></Box>
     </div>
   );
 }
