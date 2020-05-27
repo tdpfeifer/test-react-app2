@@ -21,7 +21,7 @@ export default function Footer() {
     <ThemeProvider theme={darkTheme}>
       <Box
         display="flex"
-        height="800px"
+        height="75vh"
         pt={8}
         pb={8}
         style={{backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
