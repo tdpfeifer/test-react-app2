@@ -5,6 +5,7 @@ import FrontPage from './Components/FrontPage';
 import ButtonAppBar from './Components/ButtonAppBar';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import AboutUs from './Components/AboutUs';
+import Login from './Components/Login';
 
 const theme = createMuiTheme({
   palette: {
@@ -20,6 +21,9 @@ const theme = createMuiTheme({
 const App = () => (
   <ThemeProvider theme={theme}>
     <Router>
+      <Route exact path="/login">
+        <Login />
+      </Route>
       <ButtonAppBar />
       <Switch>
         <Route exact path="/">
