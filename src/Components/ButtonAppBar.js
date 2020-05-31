@@ -3,9 +3,9 @@ import {makeStyles} from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 import Nav from './Nav';
 import {Box} from '@material-ui/core';
+import LoginModal from './LoginModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,14 +26,8 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="menu"
-          >
-            <Nav />
-          </IconButton>
+          <Nav />
+
           <Box
             style={{width: '100%'}}
             display="flex"
@@ -42,7 +36,7 @@ export default function ButtonAppBar() {
             <Button color="inherit" href="/">
               Leblanc Coffee Co.
             </Button>
-            <Button color="inherit">Login</Button>
+            <LoginModal />
           </Box>
         </Toolbar>
       </AppBar>

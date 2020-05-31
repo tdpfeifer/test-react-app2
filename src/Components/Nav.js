@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 const links = [
   {label: 'Home', to: '/'},
   {label: 'About Us', to: '/about-us'},
-  {label: 'Shop', to: '/shop'},
+  {label: 'Products', to: '/products'},
   {label: 'Contact Us', to: '/contact-us'},
 ];
 
@@ -29,8 +29,15 @@ const Nav = () => {
 
   return (
     <>
-      <Menu onClick={() => setOpen(true)} />
-
+      <IconButton
+        edge="start"
+        className={classes.menuButton}
+        color="inherit"
+        aria-label="menu"
+        onClick={() => setOpen(true)}
+      >
+        <Menu />
+      </IconButton>
       <Drawer anchor="left" open={isOpen} onClose={() => setOpen(false)}>
         <Box display="flex" justifyContent="flex-end">
           <IconButton onClick={() => setOpen(false)}>
