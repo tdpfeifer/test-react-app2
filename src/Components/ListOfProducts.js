@@ -10,9 +10,11 @@ import Product6 from '../Img/Product-6.png';
 import Feature1 from '../Img/Feature-1.png';
 import Feature2 from '../Img/Feature-2.png';
 import Feature3 from '../Img/Feature-3.png';
+import {Link} from 'react-router-dom';
 
-const ProductsList = [
+export const ProductsList = [
   {
+    id: 1,
     name: 'No.7 House Blend',
     size: '11',
     maker: 'Boxcar',
@@ -21,6 +23,7 @@ const ProductsList = [
     img: Product1,
   },
   {
+    id: 2,
     name: 'Phantom Limb Blend',
     size: '12',
     maker: 'Huckleberry',
@@ -29,6 +32,7 @@ const ProductsList = [
     img: Product2,
   },
   {
+    id: 3,
     name: 'Chicago House Blend',
     size: '12',
     maker: 'Passion House',
@@ -37,6 +41,7 @@ const ProductsList = [
     img: Product3,
   },
   {
+    id: 4,
     name: 'Time and Temperature',
     size: '12',
     maker: 'Tandem',
@@ -45,6 +50,7 @@ const ProductsList = [
     img: Feature1,
   },
   {
+    id: 5,
     name: 'Tightrope',
     size: '12',
     maker: 'Highwire',
@@ -53,6 +59,7 @@ const ProductsList = [
     img: Feature2,
   },
   {
+    id: 6,
     name: 'OMG (Oh My God)',
     size: '12',
     maker: 'AKA',
@@ -61,6 +68,7 @@ const ProductsList = [
     img: Feature3,
   },
   {
+    id: 7,
     name: 'Colombia San Roque',
     size: '12',
     maker: 'La Colombe',
@@ -69,6 +77,7 @@ const ProductsList = [
     img: Product4,
   },
   {
+    id: 8,
     name: 'Bold and the Beautiful',
     size: '10',
     maker: 'Spyhouse',
@@ -77,6 +86,7 @@ const ProductsList = [
     img: Product5,
   },
   {
+    id: 9,
     name: 'East Timor',
     size: '12',
     maker: 'Caffe Vita',
@@ -86,29 +96,34 @@ const ProductsList = [
   },
 ];
 
-export default function Products() {
+export default function ListOfProducts() {
   return (
     <Grid container spacing={3}>
       <>
         {ProductsList.map(({name, size, maker, price, rating, img}, i) => (
-          <Grid item sm={12} md={4} key={i}>
-            <ListItem button>
-              <Box
-                display="flex"
-                alignItems="center"
-                flexDirection="column"
-                p={3}
-              >
-                <img src={img} alt="" style={{width: '100%'}} />
-                <Typography variant="overline">{maker}</Typography>
-                <Typography variant="h5">{name}</Typography>
-                <Typography variant="caption">{size} oz.</Typography>
-                <Typography variant="subtitle1">${price}</Typography>
-                <Box component="fieldset" mb={3} borderColor="transparent">
-                  <Rating name="read-only" value={rating} readOnly />
+          <Grid item xs={12} md={4} key={i}>
+            <Link
+              to="/product"
+              style={{textDecoration: 'none', color: 'inherit'}}
+            >
+              <ListItem button>
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  flexDirection="column"
+                  p={3}
+                >
+                  <img src={img} alt="" style={{width: '100%'}} />
+                  <Typography variant="overline">{maker}</Typography>
+                  <Typography variant="h5">{name}</Typography>
+                  <Typography variant="caption">{size} oz.</Typography>
+                  <Typography variant="subtitle1">${price}</Typography>
+                  <Box component="fieldset" mb={3} borderColor="transparent">
+                    <Rating name="read-only" value={rating} readOnly />
+                  </Box>
                 </Box>
-              </Box>
-            </ListItem>
+              </ListItem>
+            </Link>
           </Grid>
         ))}
       </>

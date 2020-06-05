@@ -21,10 +21,12 @@ export default function Footer() {
     <ThemeProvider theme={darkTheme}>
       <Box
         display="flex"
-        height="75vh"
         pt={8}
         pb={8}
-        style={{backgroundColor: 'rgba(0, 0, 0, 0.8)'}}
+        style={{
+          minHeight: 300,
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        }}
       >
         <Container maxWidth="lg">
           <Grid container>

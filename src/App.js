@@ -5,8 +5,9 @@ import FrontPage from './Components/FrontPage';
 import ButtonAppBar from './Components/ButtonAppBar';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import AboutUs from './Components/AboutUs';
-import Products from './Components/Products';
 import Footer from './Components/Footer';
+import ListOfProducts from './Components/ListOfProducts';
+import Product from './Components/Product';
 
 const theme = createMuiTheme({
   palette: {
@@ -24,14 +25,14 @@ const App = () => (
     <Router>
       <ButtonAppBar />
       <Switch>
-        <Route exact path="/">
-          <FrontPage />
-        </Route>
         <Route path="/about-us">
           <AboutUs />
         </Route>
+        <Route path="/product">
+          <Product />
+        </Route>
         <Route exact path="/products">
-          <Products />
+          <ListOfProducts />
         </Route>
         <Route exact path="/">
           <FrontPage />
