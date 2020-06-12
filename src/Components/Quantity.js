@@ -13,15 +13,9 @@ class Quantity extends React.Component {
       count:
         type == 'add'
           ? prevState.count + 1
-          : prevState.count - 1 || prevState.counter - 1,
+          : prevState.count - 1 || prevState.counter <= 1,
     }));
   }
-
-  //   decrement(){
-  //     this.setState(prevState =>
-  //         ({counter: prevState.counter? prevState.counter-1: 0})
-  //     )
-  // }
 
   render() {
     return (

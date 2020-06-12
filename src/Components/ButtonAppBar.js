@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Nav from './Nav';
 import {Box} from '@material-ui/core';
 import LoginModal from './LoginModal';
+import Cart from './Cart';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,7 +37,10 @@ export default function ButtonAppBar() {
             <Button color="inherit" href="/">
               Leblanc Coffee Co.
             </Button>
-            <LoginModal />
+            <Box display="flex" alignItems="center">
+              <Cart />
+              <LoginModal />
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

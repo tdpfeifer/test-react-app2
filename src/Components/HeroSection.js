@@ -34,7 +34,12 @@ export default function HeroSection() {
           Our Coffee will keep you grounded.
         </Typography>
         <Box p={2}>
-          <Button variant="contained" color="primary" size="large">
+          <Button
+            variant="contained"
+            color="primary"
+            size="large"
+            href="/products"
+          >
             Shop
           </Button>
         </Box>
