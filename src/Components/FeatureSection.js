@@ -35,9 +35,23 @@ export const CoffeeList = [
 export default function FeatureSection() {
   return (
     <Grid container spacing={3}>
+      <Grid item xs={12}>
+        <Box
+          display="flex"
+          alignItems="center"
+          flexDirection="column"
+          pt={3}
+          pl={3}
+          pr={3}
+        >
+          <Typography style={{textDecoration: 'underline'}} variant="h4">
+            Featured Coffee
+          </Typography>
+        </Box>
+      </Grid>
       <>
         {CoffeeList.map(({name, size, maker, price, rating, img}, i) => (
-          <Grid item sm={12} md={4} key={i}>
+          <Grid item xs={12} md={4} key={i}>
             <ListItem button>
               <Box
                 display="flex"

@@ -5,16 +5,27 @@ import {Remove, Add} from '@material-ui/icons';
 class Quantity extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {count: 1};
+    this.state = {
+      counter: 1,
+    };
   }
 
-  onclick(type) {
-    this.setState((prevState) => ({
-      count:
-        type == 'add'
-          ? prevState.count + 1
-          : prevState.count - 1 || prevState.counter <= 1,
-    }));
+  increment() {
+    this.setState({
+      counter: this.state.counter + 1,
+    });
+  }
+
+  decrement() {
+    if (this.state.counter === 1) {
+      this.setState({
+        counter: 1,
+      });
+    } else {
+      this.setState({
+        counter: this.state.counter - 1,
+      });
+    }
   }
 
   render() {
@@ -25,13 +36,13 @@ class Quantity extends React.Component {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        style={{width: '100%'}}
+        style={{width: '100%', maxWidth: 500}}
       >
-        <IconButton onClick={this.onclick.bind(this, 'sub')}>
+        <IconButton onClick={this.decrement.bind(this)}>
           <Remove />
         </IconButton>
-        <Typography>{this.state.count}</Typography>
-        <IconButton onClick={this.onclick.bind(this, 'add')}>
+        <Typography>{this.state.counter}</Typography>
+        <IconButton onClick={this.increment.bind(this)}>
           <Add />
         </IconButton>
       </Box>

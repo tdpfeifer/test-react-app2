@@ -30,6 +30,7 @@ export default function Product() {
         </Grid>
         <Grid item xs={12} md={4}>
           <Box
+            p={1}
             style={{height: '100%'}}
             justifyContent="center"
             display="flex"
